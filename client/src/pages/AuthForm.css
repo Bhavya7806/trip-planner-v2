@@ -1,0 +1,136 @@
+/* src/pages/AuthForm.css */
+.auth-container {
+    max-width: 450px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+
+    /* --- GLASSY EFFECT --- */
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: white; /* White text for readability */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: white; /* White text for readability */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+
+    /* Styles for light text inputs on a dark background */
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #333;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    /* --- UPDATED: Added opacity and transform to transition --- */
+    transition: background-color 0.3s, transform 0.2s, opacity 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #d8004b;
+    transform: translateY(-2px);
+}
+
+/* --- NEW: Loading state for submit button --- */
+.submit-btn.is-loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none; /* Disable hover transform */
+}
+
+
+.error-message {
+    color: #d32f2f;
+    background-color: #ffcdd2;
+    padding: 0.75rem;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* --- Divider and Google Button --- */
+.auth-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ccc;
+    margin: 1.5rem 0;
+}
+.auth-divider::before,
+.auth-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.auth-divider span {
+    padding: 0 1rem;
+    color: white;
+}
+
+/* --- UPDATED: Improved Google Button Styles --- */
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.75rem; /* Made padding slightly smaller */
+    background-color: #ffffff; /* Clean white background */
+    color: #444; /* Dark grey text */
+    border: 1px solid #c9c9c9; /* Subtle grey border */
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    /* Smoother transition */
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.google-btn:hover {
+    background-color: #f8f8f8; /* Very light grey on hover */
+    /* Add a subtle shadow on hover */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.google-btn svg {
+    display: inline-block;
+    width: 20px; /* Explicitly set width */
+    height: 20px; /* Explicitly set height */
+}
+

@@ -1,0 +1,37 @@
+/* src/components/FeatureCard.css */
+
+/* This is the outer container with the gradient */
+.feature-card-border {
+    padding: 3px; /* This padding creates the border thickness */
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border-radius: 18px; /* Slightly larger than the inner card */
+    transition: transform 0.3s ease;
+}
+
+.feature-card-border:hover {
+    transform: translateY(-10px);
+}
+
+/* This is the inner card with the content */
+.feature-card {
+    background: white;
+    color: var(--text-color); /* Change text back to dark */
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    height: 100%; /* Ensures it fills the border container */
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--primary-color); /* Change icon color back to primary */
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: var(--text-color);
+}
+
+.feature-card p {
+    color: #555;
+}

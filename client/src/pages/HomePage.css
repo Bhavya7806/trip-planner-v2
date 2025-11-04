@@ -1,0 +1,84 @@
+/* src/pages/HomePage.css */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+}
+.hero-section {
+    max-width: 800px;
+    padding: 2rem;
+}
+.hero-section h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #ffffff, #c7c7c7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+.hero-section p {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.call-to-action {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.call-to-action h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.btn {
+    padding: 0.8rem 2.2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+.btn-secondary {
+    background-color: #fff;
+    color: var(--text-color);
+}
+.features-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.features-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}

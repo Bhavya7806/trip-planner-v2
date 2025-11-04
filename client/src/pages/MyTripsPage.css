@@ -1,0 +1,197 @@
+/* --- NEW: Filter/Sort Controls --- */
+.trips-filter-container {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center; /* CHANGED: from space-between to center */
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* REMOVED: flex-grow: 1; */
+    width: 300px; /* CHANGED: from min-width: 200px */
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.filter-group input,
+.filter-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #333;
+}
+/* --- End of new styles --- */
+
+.my-trips-page {
+    /* REMOVED: max-width: 1200px; */
+    /* REMOVED: margin: 0 auto; */
+    /* REMOVED: padding: 2rem; (page-container handles padding) */
+    width: 100%; /* Ensure it spans full width */
+}
+
+.my-trips-title {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    margin-bottom: 3rem;
+    padding-top: 2rem; /* Added padding here since we removed it from my-trips-page */
+}
+
+/* --- Style for when no trips are found --- */
+.no-trips-card {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 3rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+    color: white;
+}
+
+.no-trips-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.no-trips-card p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.no-trips-card .btn-primary {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.no-trips-card .btn-primary:hover {
+    background-color: #d8004b;
+    transform: translateY(-3px);
+}
+
+/* --- Grid for the trip cards --- */
+.trips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px; /* ADDED: Constrain the grid */
+    margin: 0 auto; /* ADDED: Center the grid */
+    padding: 0 2rem 2rem 2rem; /* Added padding to keep it off the edges */
+}
+
+.trip-card {
+    text-decoration: none;
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* --- NEW: This is the <Link> element wrapping the top part --- */
+.trip-card-clickable-area {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Make it a block to fill space */
+    flex-grow: 1; /* Make it take up the body space */
+}
+/* --- End of new style --- */
+
+.trip-card-header {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), #5c6bc0);
+    color: white;
+}
+
+.trip-card-sub {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.trip-card-header h2 {
+    margin: 0.25rem 0 0 0;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.trip-card-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.trip-card-body p {
+    margin-bottom: 0.75rem;
+}
+
+/* --- UPDATED: Footer styles --- */
+.trip-card-footer {
+    padding: 0.75rem 1.5rem; /* Tweaked padding */
+    background-color: rgba(0, 0, 0, 0.02); /* Slight background */
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: right; 
+}
+
+/* --- NEW: Delete button styles --- */
+.trip-card-delete-btn {
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.trip-card-delete-btn:hover {
+    background-color: #d32f2f; /* Darker red */
+}
+

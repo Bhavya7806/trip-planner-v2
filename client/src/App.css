@@ -1,0 +1,19 @@
+:root {
+  --primary-color: #3f51b5;
+  --secondary-color: #f50057;
+  --background-color: #f4f7f6;
+  --text-color: #333;
+  --light-gray: #e0e0e0;
+  --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+main { padding: 0; }
+h1, h2, h3, h4, h5, h6 { font-weight: 600; }
+.page-container {
+  min-height: 90vh;
+  padding: 2rem 1rem;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+                    url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}

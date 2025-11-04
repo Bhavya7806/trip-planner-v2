@@ -1,0 +1,53 @@
+/* src/components/TripForm.css */
+.trip-form-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+}
+.trip-form-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: white;
+}
+.form-group input, .date-input, .css-13cymwt-control, .css-t3ipsp-control {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    color: #333 !important;
+}
+.css-1dimb5e-singleValue { color: #333 !important; }
+.form-group input { width: 100%; padding: 0.8rem; border-radius: 8px; box-sizing: border-box; font-family: 'Poppins', sans-serif; font-size: 1rem; transition: border-color 0.3s, box-shadow 0.3s; }
+.destination-inputs, .form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; }
+.submit-btn { width: 100%; padding: 0.9rem; background-color: var(--secondary-color); color: white; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: background-color 0.3s, transform 0.2s; }
+.submit-btn:hover { background-color: #d8004b; transform: translateY(-2px); }
+.date-picker-wrapper, .react-datepicker-wrapper, .react-datepicker__input-container { width: 100%; }
+.date-input { width: 100%; height: 48px; padding: 0.8rem; border-radius: 8px; box-sizing: border-box; font-family: 'Poppins', sans-serif; font-size: 1rem; }
+.submit-btn { width: 100%; padding: 0.9rem; background-color: var(--secondary-color); color: white; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: background-color 0.3s, transform 0.2s, opacity 0.3s; }
+.submit-btn:hover { background-color: #d8004b; transform: translateY(-2px); }
+.date-picker-wrapper, .react-datepicker-wrapper, .react-datepicker__input-container { width: 100%; }
+.date-input { width: 100%; height: 48px; padding: 0.8rem; border-radius: 8px; box-sizing: border-box; font-family: 'Poppins', sans-serif; font-size: 1rem; }
+
+/* --- NEW: Loading state for submit button --- */
+.submit-btn.is-loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+.submit-btn.is-loading:hover {
+    transform: none; /* Disable hover effect */
+    background-color: var(--secondary-color); /* Keep original color */
+}
